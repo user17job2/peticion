@@ -15,14 +15,36 @@ body {
 	width: 100%;
 	max-width: 1000px;
     height: 600px;
-	margin: 40px auto 100px auto;
+	margin: 20px auto 100px auto;
     border: 5px solid rgba(255, 202, 202, 0.42);
     background-color: #102442;
     color: #fff;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
+	overflow-y: scroll;
+	border-radius: 5PX;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 5px;
 }
+/* .contenedor::-webkit-scrollbar-thumb{
+	background-color: #2c62b4;
+} */
+.contenedor::-webkit-scrollbar-track{
+	background-color:  #102442;
+	border-radius: 10px;
+}
+.contenedor::-webkit-scrollbar-track:hover{
+	background-color:  #2a67ca;
+}
+
+.contenedor::-webkit-scrollbar{
+	width: 15px;
+	background-color: #fff;
+	border:3PX solid #102442;
+}
+
 
 .contenedor .pelicula {
 	text-align: center;
@@ -33,9 +55,17 @@ body {
 	font-weight: 600;
 }
 
-.contenedor .pelicula .poster {
+.contenedor .pelicula .poster{
 	width: 100%;
 	margin-bottom: 10px;
+	box-shadow: 2px 3px 2px white;
+	border-radius: 15px;
+	transition: 0.3s;
+}
+
+.contenedor .pelicula .poster:hover{
+	transform: scale(1.1);
+	box-shadow: -2px -3px 2px rgb(151, 217, 237);
 	border-radius: 15px;
 }
 
@@ -49,7 +79,6 @@ body {
 	gap: 20px;
 	padding: 10px;
 }
-
 .paginacion button {
 	cursor: pointer;
 	border: none;
@@ -69,4 +98,46 @@ body {
 
 .paginacion button:hover {
 	background: #137c32;
+}
+
+
+.cambio{
+	background-color: antiquewhite;
+	width: 25px;
+	height: 25px;
+	position:absolute;
+	left:-300px;
+	margin: 10px;
+	transform: translateX(300px);
+}
+
+@media screen and (max-width: 700px) {
+	.contenedor{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+
+	.contenedor .pelicula .poster{
+		width: 95%;
+		margin-bottom: 10px;
+		box-shadow: 2px 3px 2px white;
+		border-radius: 15px;
+		transition: 0.3s;
+	}
+	
+	.contenedor .pelicula .poster:hover{
+		/* transform: scale(1.1); */
+		box-shadow: -2px -3px 2px rgb(151, 217, 237);
+		border-radius: 15px;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+	.contenedor{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
 }
