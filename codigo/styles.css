@@ -10,7 +10,18 @@ body {
 	color: #1d1d1d;
     overflow: hidden;
 }
-
+.btnL{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	width: 90px;
+	height: 30px;
+	padding: 5px;
+	border-radius:5px;
+	background-image:linear-gradient(75deg, rgb(0, 183, 0) 0%, rgb(0, 0, 184) 99%);
+	position: absolute;
+	left: 91%;
+}
 .contenedor {
 	width: 100%;
 	max-width: 1000px;
@@ -262,6 +273,9 @@ body {
 } */
 
 @media screen and (max-width: 700px) {
+	.btnL{
+		left: 83%;
+	}
 	.contenedor{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -285,6 +299,9 @@ body {
 
 
 @media screen and (max-width: 450px) {
+	.btnL{
+		left: 80%;
+	}
 	.contenedor{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
