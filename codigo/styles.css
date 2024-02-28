@@ -323,7 +323,7 @@ body {
 }
 @media screen and (min-height: 650px) {
 	.contenedor{
-		height: 100vh;
+		height: 94vh;
 		/* background-color: #fff; */
 	}
 	.paginacion {
