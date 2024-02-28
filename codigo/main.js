@@ -101,8 +101,8 @@ after.addEventListener('click', () =>{
             
             scrollToSection();
             
-            console.log(change)
-            console.log()
+            // console.log(change)
+            // console.log()
         }
     }
 })
@@ -128,7 +128,7 @@ before.addEventListener('click', () =>{
         
 
         scrollToSection();
-        console.log(change);
+        // console.log(change);
 
     }
 })
@@ -146,11 +146,12 @@ const chargeMovies = async() => {
 
             let movies = '';
             datos.results.forEach(pelicula => {
-                // console.log(pelicula);
+               console.log(pelicula);
 
             movies += `
                 <div class="pelicula">
                 <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
+                <!-- <div class='overview'><p>${pelicula.overview}</p></div> -->
                 </div>
 
                 <h1 class="titulo">${pelicula.title}</h1>
